@@ -1,0 +1,42 @@
+<style>
+.autofit-button {
+  padding: 0.5em 1em;
+  font-size: auto;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.autofit-button:hover {
+  background-color: #ddd;
+}
+</style>
+
+<div id="passwordModal" style="display: none;">
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password">
+    <button onclick="checkPassword()" class="autofit-button">→</button>
+  </div>
+</div>
+
+<button onclick="showPasswordModal()" class="autofit-button">Back to Dashboard</button>
+
+<script>
+function showPasswordModal() {
+  document.getElementById("passwordModal").style.display = "block";
+}
+
+function checkPassword() {
+  var password = document.getElementById("password").value;
+  if (password === "October52002_") {
+    window.location.href = "https://sites.google.com/view/turbofunds/admin";
+  } else if (password === "08152001") {
+    window.location.href = "https://sites.google.com/view/turbofunds/dareen-tiro";
+  } else {
+    alert("Password is wrong.");
+  }
+}
+</script>
